@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="dbReg" Class="dcReg" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=localhost\sql;Initial Catalog=dbReg;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="dbRegConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.t_log" Member="t_logs">
+    <Type Name="t_log">
+      <Column Name="log_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_reg" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tanggal" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="status" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="keterangan" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="userid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.t_usr" Member="t_usrs">
+    <Type Name="t_usr">
+      <Column Name="userid" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="role" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="nama" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="title" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="psswd" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="last_login" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.t_lph" Member="t_lphs">
+    <Type Name="t_lph">
+      <Column Name="lph_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="lph_code" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="nama_lph" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="alamat" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="kota" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.t_ref" Member="t_refs">
+    <Type Name="t_ref">
+      <Column Name="ref_id" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ref_group_id" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ref_desc" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="f_aktif" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.t_reg" Member="t_regs">
+    <Type Name="t_reg">
+      <Column Name="id_reg" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="no_daftar" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tgl_daftar" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="nama_pu" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="alamat_pu" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="kota_pu" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="jenis_usaha" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="no_telp" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="jenis_daftar" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="no_surat_pengantar" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tgl_surat_pengantar" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="status_kirim" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="penerima" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tgl_kirim" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="file_surat_pengantar" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="file_tanda_terima" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="file_formulir" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="file_verifikasi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="lph_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="status_reg" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vw_reg" Member="vw_regs">
+    <Type Name="vw_reg">
+      <Column Name="id_reg" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="no_daftar" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="tgl_daftar" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="nama_pu" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="alamat_pu" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="kota_pu" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="jenis_usaha" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="no_telp" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="jenis_daftar" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="no_surat_pengantar" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tgl_surat_pengantar" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="status_kirim" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="penerima" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tgl_kirim" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="file_surat_pengantar" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="file_tanda_terima" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="file_formulir" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="file_verifikasi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="lph_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nama_jenis_usaha" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="nama_jenis_daftar" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="nama_status_kirim" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="nama_lph" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="kota" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="status_reg" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="nama_status_reg" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.sp_Log_Insert" Method="sp_Log_Insert">
+    <Parameter Name="idreg" Type="System.Int32" DbType="Int" />
+    <Parameter Name="status" Type="System.String" DbType="VarChar(5)" />
+    <Parameter Name="keterangan" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="userid" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>
