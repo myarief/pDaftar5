@@ -22,8 +22,8 @@ namespace pDaftar3
             dcReg db = new dcReg();
             var q = from t in db.t_regs
                     select t;
-            //GridView2.DataSource = q;
-            //GridView2.DataBind();
+            GridView2.DataSource = q;
+            GridView2.DataBind();
 
         }
         protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
