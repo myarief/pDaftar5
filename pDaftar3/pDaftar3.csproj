@@ -114,6 +114,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="inquirydata.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -121,6 +122,7 @@
     <Content Include="printsp.aspx" />
     <Content Include="reglist.aspx" />
     <Content Include="regnew.aspx" />
+    <Content Include="serahsp.aspx" />
     <Content Include="Site.Mobile.Master" />
     <Content Include="scripts\jquery-3.0.0.slim.min.map" />
     <Content Include="scripts\jquery-3.0.0.min.map" />
@@ -274,6 +276,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="inquirydata.aspx.cs">
+      <DependentUpon>inquirydata.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="inquirydata.aspx.designer.cs">
+      <DependentUpon>inquirydata.aspx</DependentUpon>
+    </Compile>
     <Compile Include="main.aspx.cs">
       <DependentUpon>main.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -309,6 +318,13 @@
     </Compile>
     <Compile Include="regnew.aspx.designer.cs">
       <DependentUpon>regnew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="serahsp.aspx.cs">
+      <DependentUpon>serahsp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="serahsp.aspx.designer.cs">
+      <DependentUpon>serahsp.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Mobile.Master.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>

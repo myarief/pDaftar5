@@ -1,21 +1,21 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/main.Master" AutoEventWireup="true" CodeBehind="reglist.aspx.cs" Inherits="pDaftar3.reglist" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/main.Master" AutoEventWireup="true" CodeBehind="serahsp.aspx.cs" Inherits="pDaftar3.serahsp" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h4>Daftar Permohonan Pendaftaran</h4>
+       <h4>Penyerahan Surat Pengantar</h4>
     <br />
 
     <div style="height: 40px">
-        <asp:Button ID="btnAdd" CssClass="btn btn-primary btn-sm" runat="server" Text="Buat Baru" OnClick="btnAdd_Click" />
     </div>
-    <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" GridLines="none"
+
+     <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" GridLines="none"
         Width="100%" ShowHeaderWhenEmpty="True" DataKeyNames="no_daftar" OnRowDataBound="GridView1_RowDataBound"
         CssClass="table table-responsive table-striped table-hover">
         <Columns>
             <asp:TemplateField HeaderText="No" SortExpression="No">
                 <ItemTemplate>
-                    <%# Container.DataItemIndex + 1 %>d
+                    <%# Container.DataItemIndex + 1 %>
                 </ItemTemplate>
                 <HeaderStyle CssClass="tableHeaderLeft" Width="3%" />
             </asp:TemplateField>
@@ -42,8 +42,7 @@
             </asp:BoundField>
             <asp:TemplateField>
                 <ItemTemplate>
-                    <asp:LinkButton ID="lbView" runat="server" CommandName="lihat">view</asp:LinkButton>&nbsp;&nbsp;<asp:LinkButton
-                        ID="lbHapus" runat="server" CommandName="hapus">hapus</asp:LinkButton>
+                    <asp:LinkButton ID="lbView" runat="server" CommandName="lihat">view</asp:LinkButton>
                 </ItemTemplate>
                 <HeaderStyle CssClass="tableHeaderLeft" Width="10%" />
             </asp:TemplateField>
@@ -54,6 +53,4 @@
         <EmptyDataRowStyle CssClass="itemEmpty" />
         <RowStyle CssClass="tableRowOdd" />
     </asp:GridView>
-
-
 </asp:Content>

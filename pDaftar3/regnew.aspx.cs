@@ -13,5 +13,15 @@ namespace pDaftar3
         {
 
         }
+
+        protected void btnAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnBatal_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("reglist");
+        }
     }
 }

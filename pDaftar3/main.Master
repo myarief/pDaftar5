@@ -41,25 +41,25 @@
                                 <a class="nav-link" href="reglist">
                                     <span data-feather="file"></span>
                                     Daftar Permohonan
-            </a>
+                                </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="printsp">
                                     <span data-feather="printer"></span>
                                     Cetak Surat Pengantar
-            </a>
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="sendsp">
+                                <a class="nav-link" href="serahsp">
                                     <span data-feather="send"></span>
                                     Penyerahan Surat Pengantar
-            </a>
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link" href="inquirydata">
                                     <span data-feather="database"></span>
                                     Inquiry Data
-            </a>
+                                </a>
                             </li>
                         </ul>
                     </div>

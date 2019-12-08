@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace pDaftar3
 {
-    public partial class printsp : System.Web.UI.Page
+    public partial class serahsp : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -21,7 +21,7 @@ namespace pDaftar3
         {
             dcReg db = new dcReg();
             var q = from t in db.vw_regs
-                    where t.status_reg == "ST.1"
+                    where t.status_reg == "ST.2"
                     orderby t.no_daftar descending
                     select t;
             GridView2.DataSource = q;
@@ -33,5 +33,6 @@ namespace pDaftar3
         {
 
         }
+
     }
 }
